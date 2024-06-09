@@ -204,15 +204,16 @@ comments:
 giscus:
   repo:                "cellmin/cellmin.github.io"
   repo-id:             "R_kgDOMG3LEA"
-  category:            "Comments"
-  category-id:         "DIC_kwDOEHDTNc4B-MIg"
+  category:            "Announcements"
+  category-id:         "DIC_kwDOMG3LEM4Cf90p"
   mapping:             "pathname"
+  strict:              "0"
   reaction-enabled:    "1"
   data-emit-metadata:  "0"
+  input-position:      "top"
   theme:               "light"
   data-lang:           "ko"
   crossorigin:         "anonymous"
-
 
 # Hydejack Settings
 # ----------------------------------------------------------------------------------------
