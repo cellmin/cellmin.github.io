@@ -20,7 +20,7 @@
 lang:                  ko-KR, en-US
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 cellmin
+title:                 CELLMIN's
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -43,7 +43,7 @@ logo:                  /assets/img/cellmin.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                cellmin
+  name:                CELLMIN
   email:               devcellmin@gmail.com
   picture:             /assets/img/cellmin.png
   # # Used by `jekyll-seo-tag`:
@@ -51,32 +51,40 @@ author:
 
 # Add links to the sidebar.
 # menu:
-#   - title:             ABOUT
+#   - title:             Example
+#     url:               /example/
+#   - title:             Documentation
+#     url:               /docs/
+#   - title:             About
 #     url:               /about/
-#   - title:             DATABASE
-#     url:               /database/
-#     submenu: 
-#       - title:         MS-SQL
-#         url:           /mssql/
-#       - title:         ORACLE
-#         url:           /oracle/
-#   - title:             FLUTTER
-#     url:               /flutter/ 
+menu:
+  - title:             ABOUT
+    url:               /about/
+  - title:             DATABASE
+    url:               /database/
+    submenu: 
+      - title:         MS-SQL
+        url:           /mssql/
+      - title:         ORACLE
+        url:           /oracle/
+  - title:             FLUTTER
+    url:               /flutter/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
-#legal:
-#  - title:             LICENSE
-#    url:               /LICENSE/
-#  - title:             NOTICE
-#    url:               /NOTICE/
+legal:
+  - title:             LICENSE
+    url:               /LICENSE/
+  - title:             NOTICE
+    url:               /NOTICE/
+  - title:             CHANGELOG
+    url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             © 2024. All rights reserved.
 
 # Format of the permalinks
-#permalink:             /:categories/:year-:month-:day-:title/
-permalink:             none
+permalink:             /:categories/:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
@@ -91,17 +99,12 @@ excerpt_separator:     <!--more-->
 # remote_theme: hydecorp/hydejack@v9
 remote_theme: hydecorp/hydejack@v9
 
-
 # Customizaton
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
 accent_image:          /assets/img/sidebar-bg.jpg
 accent_color:          rgb(79,177,186)
-# accent_image:
-#   background:          center / cover url(/assets/img/doguri.jpg)
-#   overlay:             false
-# accent_color:          rgb(0,174,239)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
@@ -118,7 +121,7 @@ font:                  Noto Sans KR, Helvetica, Arial, sans-serif
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
-font_heading:          Noto Sans KR, Helvetica, Arial, sans-serif
+font:                  Noto Sans KR, Helvetica, Arial, sans-serif
 
 # The font used for code blocks. Expects a string that is a valid CSS font-family value.
 font_code:             JetBrains Mono, Nanum Gothic Coding, Menlo, Monaco, Consolas, monospace;
@@ -126,14 +129,14 @@ font_code:             JetBrains Mono, Nanum Gothic Coding, Menlo, Monaco, Conso
 defaults:
   # You can use this to provide a default accent color and background for
   # all pages under a given path:
-  # - scope:
-  #     path:            hyde/
-  #   values:
-  #     accent_color:    rgb(38,139,210)
-  #     theme_color:     rgb(32,32,32)
-  #     accent_image:
-  #       background:    rgb(32,32,32)
-  #       overlay:       false
+  - scope:
+      path:            hyde/
+    values:
+      accent_color:    rgb(38,139,210)
+      theme_color:     rgb(32,32,32)
+      accent_image:
+        background:    rgb(32,32,32)
+        overlay:       false
 
   # Don't include documents in assets in the sitemap
   - scope:
@@ -147,31 +150,11 @@ defaults:
       layout:          plain
       sitemap:         false
 
-  # Don't include site verification file(for google) in the sitemap
-  # - scope:
-  #     path:            google.html
-  #   values:
-  #     sitemap:         false
-
-  # Don't include site verification file(for naver) in the sitemap
-  # - scope:
-  #     path:            naver.html
-  #   values:
-  #     sitemap:         false
-
-  # You can use the following to enable comments on all posts.
+  # # You can use the following to enable comments on all posts.
   - scope:
       type:            posts
     values:
       comments:        true
-      # https://applause-button.com/
-      applause_button:       true
-  
-  # # You can use the following to enable comments on all posts.
-  # - scope:
-  #     type:            posts
-  #   values:
-  #     comments:        true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
@@ -204,15 +187,6 @@ kramdown:
 # To remove Google Anaylics from your page, remove the line below.
 # google_analytics:      UA-XXXXXXXX-X
 
-### S::TODO
-# google_analytics:      UA-XXXXXXXX-X
-
-# # Set which comment system to use
-# comments:
-#   # 'disqus' / 'giscus' / 'utterances' are available
-#   provider:            giscus
-### E::TODO
-
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
 # disqus:                <username>
@@ -228,15 +202,13 @@ kramdown:
 
 hydejack:
   # Configure the order of complementary content on blog posts
-  # post_addons:         [about, newsletter, related, random, comments]
-  post_addons:         [about, comments]
+  post_addons:         [about, newsletter, related, random, comments]
 
   # Configure the order of complementary content on project pages
-  # project_addons:      [about, newsletter, other, comments]
-  project_addons:      [about, other, comments]
+  project_addons:      [about, newsletter, other, comments]
 
   # Set to `true` if you don't want to show an icon indicating external links
-  no_mark_external:    true
+  no_mark_external:    false
 
   # Set to `true` if third party plugins fail to work with dynamically loaded pages
   no_push_state:       false
@@ -260,7 +232,7 @@ hydejack:
 
   # Set to `true` if you don't intend on changing the accent color on a per-page basis. 
   # This will increase site build speed!
-  no_page_style:       true
+  no_page_style:       false
 
   # Code blocks and tables "break" the layout by spanning the full available width.
   # Set this to true if you want them to be the same width as other content.
@@ -289,7 +261,7 @@ hydejack:
   no_breadcrumbs:      false
 
   # Set to `true` when building with the `--lsi` option
-  use_lsi:             false
+  use_lsi:             true
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
   # When enabled, no user-related data will be stored until the user gives consent.
@@ -377,7 +349,6 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-include-cache
   - jekyll-last-modified-at
-  - jemoji
 
 
 # SEO Tag
@@ -465,9 +436,3 @@ jekyll_compose:
       links:
         - title: Project Link
           url: https://example.com
-
-# jekyll-feed settings
-feed:
-  categories:
-    - database
-    - flutter
