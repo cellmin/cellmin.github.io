@@ -23,7 +23,7 @@ author1:
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    twitter:         Dev_Austin9753
+    # twitter:         <username>
     github:          cellmin
     email:           devcellmin@gmail.com
     # rss:             https://<url>/feed.xml
