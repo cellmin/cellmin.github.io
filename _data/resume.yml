@@ -1,0 +1,26 @@
+basics:
+  name: "Cellmin"
+  label: "SI Developer"
+  picture: /assets/img/cellmin.jpg
+  email: "cellmin@gmail.com"
+  # phone: "(+82) 10-XXXX-XXXX"
+  # website: "https://cellmin.github.io/"
+  summary: >
+    Hello, I'm Cellmin. Working as SI Developer.<br>
+  # location:
+  #   address: "2712 Broadway St"
+  #   postalCode: "CA 94115"
+  #   city: "San Francisco"
+  #   countryCode: "US"
+  #   region: "California"
+  profiles:
+    - network: "Github"
+      username: "cellmin"
+      url: "https://github.com/cellmin"
+# references:
+#   - name: "Erlich Bachman"
+#     reference: >
+#       It is my pleasure to recommend Richard, his performance working as a consultant for Main St.
+#       Company proved that he will be a valuable addition to any company.
+
+# <https://jsonresume.org/>

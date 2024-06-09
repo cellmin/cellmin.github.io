@@ -8,9 +8,9 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Working as SI Developer<br>
+    Working as SI Developer.<br>
 
-    #[resume]: /resume/
+    [resume]: /resume/
 
   # This photo will be used in the about section
   picture:
