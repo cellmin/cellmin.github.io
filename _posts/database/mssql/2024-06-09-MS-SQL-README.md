@@ -1,7 +1,5 @@
 ---
 layout: post
-related_posts:
-  - /database/mssql/MS-SQL-README/
 title:  "MS-SQL 메뉴가 추가되었습니다."
 date:   2024-06-09 15:13:00 +0900
 categories: 
