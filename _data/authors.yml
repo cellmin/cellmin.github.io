@@ -8,8 +8,8 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Do, or Do Not. There is No Try
-    Working as SI Developer
+    Do, or Do Not. There is No Try<br>
+    Working as SI Developer<br>
 
   # This photo will be used in the about section
   picture:
