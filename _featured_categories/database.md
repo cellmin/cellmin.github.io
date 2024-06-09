@@ -1,10 +1,10 @@
 ---
 layout: list
 type: category
-title: Dev. Log
-slug: devlog
+title: DATABASE
+slug: database
 sidebar: true
 order: 2
 description: >
-  Anything about development
+  Information of Databases
 ---

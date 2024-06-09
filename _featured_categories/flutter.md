@@ -1,10 +1,10 @@
 ---
 layout: list
 type: category
-title: Study Log
-slug: studylog
+title: FLUTTER
+slug: flutter
 sidebar: true
 order: 3
 description: >
-  Log study results
+  Information of Flutter
 ---
