@@ -5,4 +5,3 @@ function spread(count){
     document.getElementById('spread-icon-' + count).innerHTML == 'arrow_right' ?
     'arrow_drop_down' : 'arrow_right'
   }
-  

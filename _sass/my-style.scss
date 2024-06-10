@@ -1,59 +1,71 @@
-.dl-table {
-  a {
-    @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
-      text-underline-offset: .8rem;
-    }
-    @supports not ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
-      padding-bottom: .45rem;
-    }
-  }
-
-  .btn, .gumroad-button  {
-    margin: 1rem 0;
-  }
-}
-
+//sidebar
 .sidebar-sticky {
-  height: 100%;
-  padding-top: 5%;
-  position: absolute;
+    height: 100%;
+    padding-top: 5%;
+    position: absolute;
 }
-
 .sidebar-about {
-  padding-bottom:10%;
+    padding-bottom:10%;
 }
-
 .spread-btn{
-  left: 7%;
-  position: absolute;
-  padding: 0;
-  padding-top: 5px;
-  border: none;
-  background: none;
-  color: white;
-  cursor: pointer;
+    left: 7%;
+    position: absolute;
+    padding: 0;
+    padding-top: 5px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
 }
-
+  
 .spread-btn:hover{
-  color: grey;
+    color: grey;
+}
+  
+.menu-wrapper{
+    display: flex;
+    text-align: left;
+    margin-left: 10%;
+    margin-bottom: 0%;
+  
+    input[type=checkbox]{
+      display: none;
+    }
+  
+    input[type=checkbox] ~ ul{
+      display: none;
+      list-style: none;
+    }
+  
+    input[type=checkbox]:checked ~ ul{
+      display: block;
+    }
 }
 
-.menu-wrapper{
-  display: flex;
-  text-align: left;
-  margin-left: 10%;
-  margin-bottom: 0%;
-  
-  input[type=checkbox]{
-    display: none;
-  }
-  
-  input[type=checkbox] ~ ul{
-    display: none;
-    list-style: none;
-  }
-  
-  input[type=checkbox]:checked ~ ul{
-    display: block;
-  }
+// for top-menu
+.top-menu-wrapper{
+  display: inline-block;
+}
+
+.nav-btn, .nav-btn-bar{
+  height: 3rem;
+}
+.top-menu{
+  overflow-x: auto;
+  // overflow-y: hidden;
+  white-space: nowrap;
+}
+.top-menu.nav-btn{
+  border: none;
+  display: inline-flex;
+  width: 6rem;
+  margin-left: -1px;
+}
+.nav-btn:hover,.nav-btn:focus{
+  color: grey;
+  background-color: rgba(0,0,0,0.05);
+}
+
+.nav-span{
+  flex: none;
 }
