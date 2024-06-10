@@ -456,3 +456,12 @@ jekyll_compose:
       links:
         - title: Project Link
           url: https://example.com
+
+tipue_search:
+  include:
+    pages: true
+    collections: []
+  exclude:
+    files: []
+    categories: []
+    tags: []
