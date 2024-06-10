@@ -42,24 +42,6 @@
     }
 }
 
-// scrollbar
-*::-webkit-scrollbar {
-  width: 12px;
-  height: 3px;
-}
-*::-webkit-scrollbar-track {
-  background-color:#4b4f52; 
-  border-radius: 12px;
-}
-*::-webkit-scrollbar-thumb {
-  background-color:#5e6265; 
-  border-radius: 12px;
-}
-*::-webkit-scrollbar-thumb:hover{
-  background-color: rgb(21, 2, 91);
-}
-::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment
-
 // for top-menu
 .top-menu-wrapper{
   display: inline-block;
@@ -86,4 +68,43 @@
 
 .nav-span{
   flex: none;
+}
+
+/* 스크롤바 스타일 설정 */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 3px;
+}
+
+/* 스크롤바 트랙 스타일 설정 */
+*::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+  border-radius: 12px;
+}
+
+/* 스크롤바 손잡이 스타일 설정 */
+*::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 12px;
+}
+
+/* 스크롤바 손잡이 호버 스타일 설정 */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #8a8a8a;
+}
+
+/* 스크롤바 버튼 스타일 설정 */
+*::-webkit-scrollbar-button:start:decrement,
+*::-webkit-scrollbar-button:end:increment {
+  background-color: #d0d0d0;
+  border-radius: 6px;
+  height: 12px;
+  width: 12px;
+  border: 1px solid #c0c0c0;
+}
+
+/* 스크롤바 버튼 호버 스타일 설정 */
+*::-webkit-scrollbar-button:start:decrement:hover,
+*::-webkit-scrollbar-button:end:increment:hover {
+  background-color: #b0b0b0;
 }
