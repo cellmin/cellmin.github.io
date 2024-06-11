@@ -46,7 +46,6 @@
 .top-menu-wrapper{
   display: inline-block;
 }
-
 .nav-btn, .nav-btn-bar{
   height: 3rem;
 }
@@ -65,9 +64,11 @@
   color: grey;
   background-color: rgba(0,0,0,0.05);
 }
-
 .nav-span{
   flex: none;
+}
+@media screen and (max-width: 440px) {
+  .top-menu {display: none;}
 }
 
 /* 스크롤바 스타일 설정 */
