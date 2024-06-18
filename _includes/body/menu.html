@@ -7,7 +7,9 @@
           <span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}</span>
           <span class="icon-menu"></span>
           </a>
+          
           <!--상단메뉴 카테고리들 -->
+          <!-- 
           <div class="top-menu">
               {% if site.menu %}
                   {% for node in site.menu %}
@@ -23,20 +25,15 @@
                   {% endfor %}
               {% endif %}
           </div>
+           -->
+
           
-          <!--검색 tipuesearch -->
-          <!--
-          <div class="nav-span">
-            <form action="/search">
-                <div class="tipue_search_left">
-                  <img src="/assets/tipuesearch/search.png" class="tipue_search_icon">
-                </div>
-                <div class="tipue_search_right">
-                  <input type="text" name="q" id="tipue_search_input" pattern=".{1,}" title="At least 1 characters" required></div>
-                <div style="clear: both;"></div>
-              </form>
+          <div class="top-menu">
+            <a href="{{ '/search' | prepend: site.baseurl }}" class="nav-btn top-menu"> 
+              <i class="fas fa-fw {% if menu_index == 1 %}fa-search-dollar{% else %}fa-search{% endif %}"></i>
+              <span>Search</span>
+            </a>
           </div>
-          -->
           
       </div>
   </div>

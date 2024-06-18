@@ -67,8 +67,19 @@
 .nav-span{
   flex: none;
 }
-@media screen and (max-width: 42em) {
-  .top-menu {display: none;}
+
+// // display none when top menu shows menus
+// @media screen and (max-width: 42em) {
+//   .top-menu {display: none;}
+// }
+
+/* giscus(댓글) */
+.giscus, .giscus-frame {
+  width: 100%;
+}
+
+.giscus-frame {
+  border: none;
 }
 
 /* 스크롤바 스타일 설정 */
