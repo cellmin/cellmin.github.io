@@ -1,3 +1,8 @@
+{% assign menu_url = page.url | slice: 1, 6 %}{% if menu_url == 'search' %}{% assign menu_index = 1 %}{% endif %}
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" />
+
 <!--상단메뉴바-->
 <div id="_navbar" class="navbar fixed-top">
   <div class="content">
@@ -26,7 +31,6 @@
               {% endif %}
           </div>
            -->
-
           
           <div class="top-menu">
             <a href="{{ '/search' | prepend: site.baseurl }}" class="nav-btn top-menu"> 
