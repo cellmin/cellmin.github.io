@@ -69,6 +69,11 @@ menu:
         url:           /oracle/
   - title:             FLUTTER
     url:               /flutter/
+  - title:             E-GOV-FRAME
+    url:               /egovframe/
+    submenu:
+      - title:         MSA
+        url:           /egov_msa/
   - title:             SEARCH
     url:               /search/
 
