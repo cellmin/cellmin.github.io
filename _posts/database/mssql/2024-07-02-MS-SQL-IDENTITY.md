@@ -42,7 +42,6 @@ CREATE TABLE SAMPLE1
 4) 임시로 만든 TMP 테이블의 이름을 수정
 ```
 -  SSMS를 통해 IDENTITY를 지정하는 로직은 다음과 같습니다.
-
 ```sql
 -- SSMS를 통해 IDENTITY를 지정하는 내용
 CREATE TABLE DBO.TMP_TBL1(
@@ -73,7 +72,6 @@ EXECUTE SP_RENAME N'DBO.TMP_TBL1', N'TBL1', 'OBJECT'
 
 #### 3. IDENTITY를 임의로 수정
 -  IDENTITY를 수동으로 값을 수정하는 방법은 다음과 같습니다.
-
 ```sql
 -- 증가값을 수동으로 지정할 수 있도록 수정
 SET IDENTITY_INSERT [테이블명] ON;
