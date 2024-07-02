@@ -4,7 +4,7 @@ related_posts:
 title: "MS-SQL의 자동 증가 값(IDENTITY)설정"
 subtitle: "MS-SQL에서의 AUTO INCREMENT와 같은 기능은 무엇인가?"
 date: 2024-07-02 19:27 화요일
-categories: [ database, mssql ]
+categories: [database, mssql]
 tags:
   - DATABASE
   - MS-SQL
