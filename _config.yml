@@ -69,6 +69,11 @@ menu:
         url:           /oracle/
   - title:             FLUTTER
     url:               /flutter/
+  - title:             A.I.
+    url:               /ai/
+    submenu:
+      - title:         Midjourney
+        url:           /midjourney/
   - title:             E-GOV-FRAME
     url:               /egovframe/
     submenu:
