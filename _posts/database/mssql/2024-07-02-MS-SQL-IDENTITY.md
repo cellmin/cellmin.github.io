@@ -17,7 +17,7 @@ description: >
 ## MS-SQL의 자동 증가 값(IDENTITY)이란?
 
 #### 0. 참조
- [MSSQL 자동 증가 값(IDENTITY) 설정 방법](https://travelpark.tistory.com/50)
+ [MSSQL 자동 증가 값(IDENTITY) 설정 방법](https://travelpark.tistory.com/50)<br>
  [기존 칼럼을 IDENTITY 속성으로 변경하기](https://chozzahacker.blogspot.com/2014/05/alteridentity.html)
 
 #### 1. 서론
@@ -41,6 +41,7 @@ CREATE TABLE SAMPLE1
 3) 기존의 테이블을 DROP
 4) 임시로 만든 TMP 테이블의 이름을 수정
 ```
+
 ```SQL
 /* SSMS를 통해 IDENTITY를 지정하는 내용 */
 CREATE TABLE DBO.TMP_TBL1(
