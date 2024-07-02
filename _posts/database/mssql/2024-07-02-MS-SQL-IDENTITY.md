@@ -33,7 +33,7 @@ CREATE TABLE SAMPLE1
 )
 ```
 
-*  이미 테이블이 생성되어 있고, 해당 테이블의 특정 칼럼에 IDENTITY를 지정하는 방법은 SSMS를 이용하는 수 밖에 없습니다. 
+*  이미 테이블이 생성되어 있고, 해당 테이블의 특정 칼럼에 IDENTITY를 지정하는 방법은 SSMS를 이용해야 합니다.
 ```TEXT
 ※ 번외) SSMS를 이용하여 IDENTITY를 지정하는 로직
 1) 임시로 TMP 테이블을 생성
@@ -42,6 +42,7 @@ CREATE TABLE SAMPLE1
 4) 임시로 만든 TMP 테이블의 이름을 수정
 ```
 
+*  SSMS를 통해 IDENTITY를 지정하는 로직은 다음과 같습니다.
 ```SQL
 /* SSMS를 통해 IDENTITY를 지정하는 내용 */
 CREATE TABLE DBO.TMP_TBL1(
@@ -100,6 +101,7 @@ ex) DBCC CHECKIDENT('[데이터베이스명].[dbo].[테이블명]', RESEED, 0)
 /* 증가값 자동 지정으로 세팅 변경 */
 SET IDENTITY_INSERT [테이블명] OFF;
 ```
+
 *  모든 데이터를 삭제 후, 아예 초기화를 시키고 싶을 때는, 위의 내용과 같이 DBCC CHECKIDENT('\[데이터베이스명].\[dbo].\[테이블명]', RESEED, 0); 이런 식으로 초기값을 0으로 설정하면 됩니다.
 
 해당 내용을 통해 MS-SQL에서 AUTO-INCREMENT와 같은 기능인 IDENTITY를 알아 보았습니다.
