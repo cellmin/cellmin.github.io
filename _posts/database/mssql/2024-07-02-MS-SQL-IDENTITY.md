@@ -34,7 +34,7 @@ CREATE TABLE SAMPLE1
 ```
 
 -  이미 테이블이 생성되어 있고, 해당 테이블의 특정 칼럼에 IDENTITY를 지정하는 방법은 SSMS를 이용해야 합니다.
-```TEXT
+```
 ※ 번외) SSMS를 이용하여 IDENTITY를 지정하는 로직
 1) 임시로 TMP 테이블을 생성
 2) 추가하는 TABLE의 데이터를 TMP 테이블로 이동
