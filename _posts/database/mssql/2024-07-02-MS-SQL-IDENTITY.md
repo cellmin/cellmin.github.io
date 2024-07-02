@@ -26,7 +26,7 @@ description: >
 
 #### 2. IDENTITY 지정
 -  DDL을 통해 IDENTITY를 지정하는 방법은 테이블을 생성 할 때, 함께 선언을 해야 합니다.
-```sql
+``` sql
 CREATE TABLE SAMPLE1
 (
 	  [S_IDX] [bigint] IDENTITY(1,1) NOT NULL,
@@ -41,7 +41,6 @@ CREATE TABLE SAMPLE1
 3) 기존의 테이블을 DROP
 4) 임시로 만든 TMP 테이블의 이름을 수정
 ```
-
 -  SSMS를 통해 IDENTITY를 지정하는 로직은 다음과 같습니다.
 ```sql
 /* SSMS를 통해 IDENTITY를 지정하는 내용 */
@@ -71,7 +70,7 @@ GO
 EXECUTE SP_RENAME N'DBO.TMP_TBL1', N'TBL1', 'OBJECT'
 ```
 
-#### 3. IDENTITY를 임의로 수정 
+#### 3. IDENTITY를 임의로 수정
 -  IDENTITY를 수동으로 값을 수정하는 방법은 다음과 같습니다.
 ```sql
 /* 증가값을 수동으로 지정할 수 있도록 수정 */
