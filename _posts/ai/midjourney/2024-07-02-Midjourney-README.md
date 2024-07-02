@@ -11,5 +11,5 @@ description: >
 * toc
 {:toc}
 
-## MS-SQL MENU README
-MS-SQL 메뉴가 추가되었습니다.
+## A.I.의 미드저니(Midjourney)에 대한 메뉴가 추가 되었습니다.
+A.I.의 미드저니(Midjourney)에 대한 메뉴가 추가 되었습니다.
