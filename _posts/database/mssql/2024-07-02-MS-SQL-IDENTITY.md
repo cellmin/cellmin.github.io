@@ -5,6 +5,9 @@ title: "MS-SQL의 자동 증가 값(IDENTITY)설정"
 subtitle: "MS-SQL에서의 AUTO INCREMENT와 같은 기능은 무엇인가?"
 date: 2024-07-02 19:27:00 +0900
 categories: [database, mssql]
+tags:
+  - DATABASE
+  - MS-SQL
 description: >
   'MS-SQL의 IDENTITY에 대하여 알아보자
 ---
@@ -23,7 +26,7 @@ description: >
 
 #### 2. IDENTITY 지정
 -  DDL을 통해 IDENTITY를 지정하는 방법은 테이블을 생성 할 때, 함께 선언을 해야 합니다.
-```
+```SQL
 CREATE TABLE SAMPLE1
 (
 	  [S_IDX] [bigint] IDENTITY(1,1) NOT NULL,
@@ -31,14 +34,14 @@ CREATE TABLE SAMPLE1
 ```
 
 *  이미 테이블이 생성되어 있고, 해당 테이블의 특정 칼럼에 IDENTITY를 지정하는 방법은 SSMS를 이용하는 수 밖에 없습니다. 
-```
+```TEXT
 ※ 번외) SSMS를 이용하여 IDENTITY를 지정하는 로직
 1) 임시로 TMP 테이블을 생성
 2) 추가하는 TABLE의 데이터를 TMP 테이블로 이동
 3) 기존의 테이블을 DROP
 4) 임시로 만든 TMP 테이블의 이름을 수정
 ```
-```
+```SQL
 /* SSMS를 통해 IDENTITY를 지정하는 내용 */
 CREATE TABLE DBO.TMP_TBL1(
 COL1 INT NOT NULL IDENTITY (1, 1),
@@ -68,7 +71,7 @@ EXECUTE SP_RENAME N'DBO.TMP_TBL1', N'TBL1', 'OBJECT'
 
 #### 3. IDENTITY를 임의로 수정 
 -  IDENTITY를 수동으로 값을 수정하는 방법은 다음과 같습니다.
-```
+```SQL
 /* 증가값을 수동으로 지정할 수 있도록 수정 */
 SET IDENTITY_INSERT [테이블명] ON;
 
@@ -82,7 +85,7 @@ SET IDENTITY_INSERT [테이블명] OFF;
 #### 4. IDENTITY를 원하는 값으로 세팅
 -  DELETE 문을 이용해 삭제를 하더라도 IDENTITY는 다시 그 값을 이용할 수 없습니다.
 -  아래의 내용과 같이 현재의 INDEX 값을 확인 하고 원하는 값으로 세팅할 수 있습니다.
-```
+```SQL
 /* 현재 id값 확인 */
 SELECT IDENT_CURRENT('[테이블명]')  
 
