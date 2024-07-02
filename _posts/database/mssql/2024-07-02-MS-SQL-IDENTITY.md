@@ -78,10 +78,10 @@ EXECUTE SP_RENAME N'DBO.TMP_TBL1', N'TBL1', 'OBJECT'
 -- 증가값을 수동으로 지정할 수 있도록 수정
 SET IDENTITY_INSERT [테이블명] ON;
 
-/* 원하는 값 입력 */
+-- 원하는 값 입력 
 INSERT INTO SAMPLE1(S_IDX) VALUES (100)
 
-/* 증가값을 자동 지정으로 세팅 변경 */
+-- 증가값을 자동 지정으로 세팅 변경
 SET IDENTITY_INSERT [테이블명] OFF;
 ```
 
@@ -89,17 +89,17 @@ SET IDENTITY_INSERT [테이블명] OFF;
 -  DELETE 문을 이용해 삭제를 하더라도 IDENTITY는 다시 그 값을 이용할 수 없습니다.
 -  아래의 내용과 같이 현재의 INDEX 값을 확인 하고 원하는 값으로 세팅할 수 있습니다.
 ```sql
-- 현재 id값 확인
+-- 현재 id값 확인
 SELECT IDENT_CURRENT('[테이블명]')  
 
-/* 증가값을 수동으로 지정할 수 있도록 수정 */
+-- 증가값을 수동으로 지정할 수 있도록 수정
 SET IDENTITY_INSERT [테이블명] ON;
 
-/* 원하는 값으로 초기값 세팅 */
+ 원하는 값으로 초기값 세팅
 DBCC CHECKIDENT('[테이블명]', RESEED, 초기값)
-/* 예시: DBCC CHECKIDENT('[데이터베이스명].[dbo].[테이블명]', RESEED, 0) */
+-- 예시: DBCC CHECKIDENT('[데이터베이스명].[dbo].[테이블명]', RESEED, 0)
 
-/* 증가값 자동 지정으로 세팅 변경 */
+-- 증가값 자동 지정으로 세팅 변경
 SET IDENTITY_INSERT [테이블명] OFF;
 ```
 
