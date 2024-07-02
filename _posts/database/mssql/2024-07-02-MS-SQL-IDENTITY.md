@@ -3,7 +3,7 @@ layout: post
 related_posts: 
 title: "MS-SQL의 자동 증가 값(IDENTITY)설정"
 subtitle: "MS-SQL에서의 AUTO INCREMENT와 같은 기능은 무엇인가?"
-date: 2024-07-02 19:27
+date: 2024-07-02 19:27:00 +0900
 categories: [database, mssql]
 description: >
   'MS-SQL의 IDENTITY에 대하여 알아보자
