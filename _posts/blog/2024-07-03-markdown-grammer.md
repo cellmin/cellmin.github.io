@@ -23,7 +23,7 @@ description: >
 ---
 layout: post
 title: "Github Blog 만들기 #3 - Hydejack 글쓰기 문법 예시" 
-image: /assets/img/blog/example-content-ii.jpg
+image: /assets/img/post/blog/example-content-ii.jpg
 sitemap: false
 categories: [depth1,depth2]
 tags: [anytag]
@@ -42,7 +42,9 @@ tags: [anytag]
 ###### depth6
 ~~~
 
-*  이렇게 할 때, 목차(toc)를 보시면 해당 depth에 따라서 다른 아이콘과 들여쓰기가 적용됩니다.
+![blog_20240703_1.png](../../assets/img/post/blog/blog_20240703_1.png)
+
+*  클릭하면 해당 위치로 이동합니다.
 
 #### 02. Note 추가
 *  특정 문단이나 문구 밑에 사족을 달 때 사용합니다.
@@ -70,12 +72,12 @@ tags: [anytag]
 *  이미지에 설명을 달아줄 수 있습니다.<br> 특정 이미지 밑에 아래와 같이 작성하면 됩니다.
 
 ~~~yml
-![6.png](..%2F..%2F..%2Fassets%2Fblog%2F6.png){:.lead width="800" height="100" loading="lazy"}
+![blog_20240703_2.png](../../assets/img/post/blog/blog_20240703_2.png){:.lead width="800" height="100" loading="lazy"}
 귀여운 이미지네요.
 {:.figcaption}
 ~~~
 
-![6.png](..%2F..%2F..%2Fassets%2Fblog%2F6.png){:.lead width="800" height="100" loading="lazy"}
+![blog_20240703_2.png](../../assets/img/post/blog/blog_20240703_2.png){:.lead width="800" height="100" loading="lazy"}
 귀여운 이미지네요.
 {:.figcaption}
 
