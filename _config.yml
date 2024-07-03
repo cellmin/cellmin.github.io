@@ -60,6 +60,8 @@ author:
 menu:
   - title:             ABOUT
     url:               /about/
+  - title:             BLOG
+    url:               /blog/
   - title:             DATABASE
     url:               /database/
     submenu: 
