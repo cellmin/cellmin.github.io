@@ -43,7 +43,7 @@ CREATE TABLE SAMPLE1
 3) 기존의 테이블을 DROP
 4) 임시로 만든 TMP 테이블의 이름을 수정
 ```
-<br>
+
 - SSMS를 통해 IDENTITY를 지정하는 로직은 다음과 같습니다. 
 
 ~~~sql
