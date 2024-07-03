@@ -29,7 +29,6 @@ description: >
 
 ~~~sql
 --file: `발생 쿼리`
-
 CREATE TABLE SAMPLE1
 (
 	  [S_IDX] [bigint] IDENTITY(1,1) NOT NULL,
@@ -49,7 +48,6 @@ CREATE TABLE SAMPLE1
 
 ~~~sql
 --file: `발생 쿼리`
-
 CREATE TABLE DBO.TMP_TBL1(
   COL1 INT NOT NULL IDENTITY (1, 1),
   COL2 DATETIME NULL
@@ -83,7 +81,6 @@ GO
 
 ~~~sql
 --file: `발생 쿼리`
-
 -- 증가값을 수동으로 지정할 수 있도록 수정
 SET IDENTITY_INSERT [테이블명] ON;
 
@@ -100,7 +97,6 @@ SET IDENTITY_INSERT [테이블명] OFF;
 
 ~~~sql
 --file: `발생 쿼리`
-
 -- 현재 id값 확인
 SELECT IDENT_CURRENT('[테이블명]')  
 
