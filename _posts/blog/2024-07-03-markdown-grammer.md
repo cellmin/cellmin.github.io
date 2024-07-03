@@ -261,13 +261,13 @@ Liquid 템플릿 엔진의 문법
 #### 10. 수학 블럭
 *  수학공식에 대한 문법 지원도 해줍니다.<br> 알고리즘 DP같은 글 정리할 때 공식을 정리할 때 사용할 듯 합니다.
 
-~~~yml
+~~~latex
 Lorem ipsum $$ f(x) = x^2 $$
 ~~~
 
 Lorem ipsum $$ f(x) = x^2 $$
 
-~~~yml
+~~~latex
 $$
 \begin{aligned} %!!15
   \phi(x,y) &= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
@@ -286,10 +286,12 @@ $$
 \end{aligned}
 $$
 
+An optional caption for a math block
+{:.figcaption}
 ~~~
 
 $$
-\begin{aligned} %!!15
+\begin{aligned}
   \phi(x,y) &= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
             &= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
             &= (x_1, \ldots, x_n)
@@ -303,7 +305,7 @@ $$
                  \vdots \\
                  y_n
                \end{array}\right)
-\end{aligned} %!!15
+\end{aligned}
 $$
 
 An optional caption for a math block
