@@ -26,14 +26,17 @@ description: >
 
 #### 2. IDENTITY 지정
 -  DDL을 통해 IDENTITY를 지정하는 방법은 테이블을 생성 할 때, 함께 선언을 해야 합니다.
+{% row %}
 ```sql
 CREATE TABLE SAMPLE1
 (
 	  [S_IDX] [bigint] IDENTITY(1,1) NOT NULL,
 )
 ```
+{% endrow %}
 
 -  이미 테이블이 생성되어 있고, 해당 테이블의 특정 칼럼에 IDENTITY를 지정하는 방법은 SSMS를 이용해야 합니다.
+{% row %}
 ```
 ※ 번외) SSMS를 이용하여 IDENTITY를 지정하는 로직
 1) 임시로 TMP 테이블을 생성
@@ -41,8 +44,10 @@ CREATE TABLE SAMPLE1
 3) 기존의 테이블을 DROP
 4) 임시로 만든 TMP 테이블의 이름을 수정
 ```
+{% endrow %}
 
 -  SSMS를 통해 IDENTITY를 지정하는 로직은 다음과 같습니다.
+{% row %}
 ```sql
 CREATE TABLE DBO.TMP_TBL1(
 COL1 INT NOT NULL IDENTITY (1, 1),
@@ -69,9 +74,11 @@ GO
 
 EXECUTE SP_RENAME N'DBO.TMP_TBL1', N'TBL1', 'OBJECT';
 ```
+{% endrow %}
 
 #### 3. IDENTITY를 임의로 수정
--  IDENTITY를 수동으로 값을 수정하는 방법은 다음과 같습니다.<br>
+-  IDENTITY를 수동으로 값을 수정하는 방법은 다음과 같습니다.
+{% row %}
 ```sql
 SET IDENTITY_INSERT [테이블명] ON; -- 증가값을 수동으로 지정할 수 있도록 수정
 
@@ -79,10 +86,12 @@ INSERT INTO SAMPLE1(S_IDX) VALUES (100) -- 원하는 값 입력
 
 SET IDENTITY_INSERT [테이블명] OFF; -- 증가값을 자동 지정으로 세팅 변경
 ```
+{% endrow %}
 
 #### 4. IDENTITY를 원하는 값으로 세팅
 -  DELETE 문을 이용해 삭제를 하더라도 IDENTITY는 다시 그 값을 이용할 수 없습니다.
 -  아래의 내용과 같이 현재의 INDEX 값을 확인 하고 원하는 값으로 세팅할 수 있습니다.
+{% row %}
 ```sql
 SELECT IDENT_CURRENT('[테이블명]') -- 현재 id값 확인
 
@@ -93,6 +102,7 @@ DBCC CHECKIDENT('[테이블명]', RESEED, 초기값); -- 원하는 값으로 초
 
 SET IDENTITY_INSERT [테이블명] OFF; -- 증가값 자동 지정으로 세팅 변경
 ```
+{% endrow %}
 
 -  모든 데이터를 삭제 후, 아예 초기화를 시키고 싶을 때는, 위의 내용과 같이 DBCC CHECKIDENT('\[데이터베이스명].\[dbo].\[테이블명]', RESEED, 0); 이런 식으로 초기값을 0으로 설정하면 됩니다.
 
