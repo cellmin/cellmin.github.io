@@ -26,13 +26,14 @@ description: >
 
 #### 2. IDENTITY 지정
 -  DDL을 통해 IDENTITY를 지정하는 방법은 테이블을 생성 할 때, 함께 선언을 해야 합니다.
+
 ~~~sql
-//file: 'test.sql'
+//file: '발생쿼리'
 
 CREATE TABLE SAMPLE1
 (
 	  [S_IDX] [bigint] IDENTITY(1,1) NOT NULL,
-)
+);
 ~~~
 
 *  이미 테이블이 생성되어 있고, 해당 테이블의 특정 칼럼에 IDENTITY를 지정하는 방법은 SSMS를 이용하는 수 밖에 없습니다. 
@@ -43,9 +44,11 @@ CREATE TABLE SAMPLE1
 3) 기존의 테이블을 DROP
 4) 임시로 만든 TMP 테이블의 이름을 수정
 ```
+<br>
 - SSMS를 통해 IDENTITY를 지정하는 로직은 다음과 같습니다. 
+
 ~~~sql
-//file: 'test.sql'
+//file: '발생쿼리'
 
 CREATE TABLE DBO.TMP_TBL1(
   COL1 INT NOT NULL IDENTITY (1, 1),
@@ -79,7 +82,7 @@ GO
 -  IDENTITY를 수동으로 값을 수정하는 방법은 다음과 같습니다. 
 
 ~~~sql
-//file: 'test.sql'
+//file: '발생쿼리'
 
 -- 증가값을 수동으로 지정할 수 있도록 수정
 SET IDENTITY_INSERT [테이블명] ON;
@@ -96,7 +99,7 @@ SET IDENTITY_INSERT [테이블명] OFF;
 -  아래의 내용과 같이 현재의 INDEX 값을 확인 하고 원하는 값으로 세팅할 수 있습니다. 
 
 ~~~sql
-//file: 'test.sql'
+//file: '발생쿼리'
 
 -- 현재 id값 확인
 SELECT IDENT_CURRENT('[테이블명]')  
