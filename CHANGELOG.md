@@ -97,7 +97,7 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
   
 *   Resumes can now have download buttons.
 
-    ![Download Buttons](/assets/img/blog/9.1.0-3.png){:.border.lead width="1776" height="258" loading="lazy"}
+    ![Download Buttons](/assets/img/origin/9.1.0-3.png){:.border.lead width="1776" height="258" loading="lazy"}
 
     Add the following to the front matter. Note that the PDF needs to be pre-generated. 
     See [the docs](docs/basics.md#downloads) for more.
@@ -113,7 +113,7 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
 
 *   Added breadcrumbs above page title:
 
-    ![Breadcrumbs](/assets/img/blog/9.1.0-2.png){:.border.lead width="1588" height="164" loading="lazy"}
+    ![Breadcrumbs](/assets/img/origin/9.1.0-2.png){:.border.lead width="1588" height="164" loading="lazy"}
 
     Note that this requires a [directory-like URL pattern](https://qwtel.com/posts/software/urls-are-directories/) like `/blog/:categories/:year-:month-:day-:title/` (default for Hydejack).
 
@@ -121,7 +121,7 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
 
 *   Added "Last modified at" to post layout:
 
-    ![Last modified at](/assets/img/blog/9.1.0-1.png){:.border.lead width="1254" height="218" loading="lazy"}
+    ![Last modified at](/assets/img/origin/9.1.0-1.png){:.border.lead width="1254" height="218" loading="lazy"}
 
     To enable this feature, the post needs to have a `last_modified_at` property with a valid date. You can either set it manually in the frontmatter (not recommended), or use the [`jekyll-last-modified-at` plugin](https://github.com/gjtorikian/jekyll-last-modified-at) to set it for you (Not available on GitHub Pages!). 
 
