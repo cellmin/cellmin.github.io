@@ -44,7 +44,6 @@ CREATE TABLE SAMPLE1
 
 -  SSMS를 통해 IDENTITY를 지정하는 로직은 다음과 같습니다.
 ```sql
--- SSMS를 통해 IDENTITY를 지정하는 내용
 CREATE TABLE DBO.TMP_TBL1(
 COL1 INT NOT NULL IDENTITY (1, 1),
 COL2 DATETIME NULL)
@@ -74,32 +73,25 @@ EXECUTE SP_RENAME N'DBO.TMP_TBL1', N'TBL1', 'OBJECT';
 #### 3. IDENTITY를 임의로 수정
 -  IDENTITY를 수동으로 값을 수정하는 방법은 다음과 같습니다.<br>
 ```sql
--- 증가값을 수동으로 지정할 수 있도록 수정
-SET IDENTITY_INSERT [테이블명] ON;
+SET IDENTITY_INSERT [테이블명] ON; -- 증가값을 수동으로 지정할 수 있도록 수정
 
--- 원하는 값 입력 
-INSERT INTO SAMPLE1(S_IDX) VALUES (100)
+INSERT INTO SAMPLE1(S_IDX) VALUES (100) -- 원하는 값 입력 
 
--- 증가값을 자동 지정으로 세팅 변경
-SET IDENTITY_INSERT [테이블명] OFF;
+SET IDENTITY_INSERT [테이블명] OFF; -- 증가값을 자동 지정으로 세팅 변경
 ```
 
 #### 4. IDENTITY를 원하는 값으로 세팅
 -  DELETE 문을 이용해 삭제를 하더라도 IDENTITY는 다시 그 값을 이용할 수 없습니다.
 -  아래의 내용과 같이 현재의 INDEX 값을 확인 하고 원하는 값으로 세팅할 수 있습니다.
 ```sql
--- 현재 id값 확인
-SELECT IDENT_CURRENT('[테이블명]')  
+SELECT IDENT_CURRENT('[테이블명]') -- 현재 id값 확인
 
--- 증가값을 수동으로 지정할 수 있도록 수정
-SET IDENTITY_INSERT [테이블명] ON;
+SET IDENTITY_INSERT [테이블명] ON; -- 증가값을 수동으로 지정할 수 있도록 수정
 
- 원하는 값으로 초기값 세팅
-DBCC CHECKIDENT('[테이블명]', RESEED, 초기값)
+DBCC CHECKIDENT('[테이블명]', RESEED, 초기값); -- 원하는 값으로 초기값 세팅
 -- 예시: DBCC CHECKIDENT('[데이터베이스명].[dbo].[테이블명]', RESEED, 0)
 
--- 증가값 자동 지정으로 세팅 변경
-SET IDENTITY_INSERT [테이블명] OFF;
+SET IDENTITY_INSERT [테이블명] OFF; -- 증가값 자동 지정으로 세팅 변경
 ```
 
 -  모든 데이터를 삭제 후, 아예 초기화를 시키고 싶을 때는, 위의 내용과 같이 DBCC CHECKIDENT('\[데이터베이스명].\[dbo].\[테이블명]', RESEED, 0); 이런 식으로 초기값을 0으로 설정하면 됩니다.
