@@ -102,8 +102,9 @@ permalink:             /:categories/:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
-paginate_path:         /page-:num/
-excerpt_separator:     <!--more-->
+paginate_path:         /:num/
+# paginate_path:         /page-:num/
+# excerpt_separator:     <!--more-->
 
 
 # Theme
