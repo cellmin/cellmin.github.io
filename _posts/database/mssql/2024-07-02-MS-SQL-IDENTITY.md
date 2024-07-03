@@ -42,7 +42,7 @@ CREATE TABLE SAMPLE1
 4) 임시로 만든 TMP 테이블의 이름을 수정
 ```
 
-*  SSMS를 통해 IDENTITY를 지정하는 내용
+*  SSMS를 통해 IDENTITY를 지정하는 내용\n
 ```sql
 CREATE TABLE DBO.TMP_TBL1(
   COL1 INT NOT NULL IDENTITY (1, 1),
