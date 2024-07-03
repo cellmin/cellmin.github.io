@@ -303,7 +303,7 @@ $$
                  \vdots \\
                  y_n
                \end{array}\right)
-\end{aligned}
+\end{aligned} %!!15
 $$
 
 An optional caption for a math block
