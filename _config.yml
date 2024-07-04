@@ -65,6 +65,8 @@ menu:
   - title:             DATABASE
     url:               /database/
     submenu: 
+      - title:         MARIADB
+        url:           /mariadb/
       - title:         MS-SQL
         url:           /mssql/
       - title:         ORACLE
