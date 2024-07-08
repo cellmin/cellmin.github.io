@@ -75,10 +75,16 @@ menu:
     url:               /flutter/
   - title:             A.I.
     url:               /ai/
-    submenu:
-      - title:         Midjourney
-        url:           /midjourney/
-  - title:             E-Govframe
+  # - title:             JavaScript
+  #   url:               /javascript/
+  #   submenu:
+  #     - title:         NodeJS
+  #       url:           /nodejs/
+  #     - title:         ReactJS
+  #       url:           /reactjs/
+  #     - title:         NextJS
+  #       url:           /nextjs/
+  - title:             e-Govframe
     url:               /egovframe/
     submenu:
       - title:         MSA

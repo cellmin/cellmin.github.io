@@ -3,14 +3,14 @@
 layout: list
 
 # The title of the tag's page.
-title: Midjourney
+title: JavaScript
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: midjourney
+slug: javascript
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  A.I. Midjourney Information
+  Information of JavaScript
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true
