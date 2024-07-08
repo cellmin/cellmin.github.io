@@ -58,32 +58,32 @@ author:
 #   - title:             About
 #     url:               /about/
 menu:
-  - title:             ABOUT
+  - title:             About
     url:               /about/
-  - title:             BLOG
+  - title:             Blog
     url:               /blog/
-  - title:             DATABASE
+  - title:             Database
     url:               /database/
     submenu: 
-      - title:         MARIADB
+      - title:         MariaDB
         url:           /mariadb/
       - title:         MS-SQL
         url:           /mssql/
-      - title:         ORACLE
+      - title:         Oracle
         url:           /oracle/
-  - title:             FLUTTER
+  - title:             Flutter
     url:               /flutter/
   - title:             A.I.
     url:               /ai/
     submenu:
       - title:         Midjourney
         url:           /midjourney/
-  - title:             E-GOV-FRAME
+  - title:             E-Govframe
     url:               /egovframe/
     submenu:
       - title:         MSA
         url:           /egov_msa/
-  - title:             SEARCH
+  - title:             Search
     url:               /search/
 
 # Add links to the footer.
